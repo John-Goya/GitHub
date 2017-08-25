@@ -1,0 +1,10 @@
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\bin\Debug\netcoreapp1.1\JG_Final_Practical.deps.json
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\bin\Debug\netcoreapp1.1\JG_Final_Practical.runtimeconfig.json
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\bin\Debug\netcoreapp1.1\JG_Final_Practical.runtimeconfig.dev.json
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\bin\Debug\netcoreapp1.1\JG_Final_Practical.dll
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\bin\Debug\netcoreapp1.1\JG_Final_Practical.pdb
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\obj\Debug\netcoreapp1.1\JG_Final_Practical.csprojResolveAssemblyReference.cache
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\obj\Debug\netcoreapp1.1\JG_Final_Practical.csproj.CoreCompileInputs.cache
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\obj\Debug\netcoreapp1.1\JG_Final_Practical.AssemblyInfo.cs
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\obj\Debug\netcoreapp1.1\JG_Final_Practical.dll
+C:\Users\John\Documents\GitHub\VisualStudio-18\JG_Final_Practical\JG_Final_Practical\obj\Debug\netcoreapp1.1\JG_Final_Practical.pdb

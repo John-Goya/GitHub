@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 10px;
+		background-image: url("https://3.bp.blogspot.com/-rd8OWqlJq5o/UIGM-gcblII/AAAAAAAAAHc/SLMelrNFzlc/s1600/red_checkers_background_3.jpg");
+	}
+
+.flex-containermaster {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+  	justify-content: space-around;
+    width: 900px;
+    height: 400px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: grey;
+}
+
+.flex-container1 {
+    display: -webkit-flex;
+    display: flex;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+}
+
+.flex-container2 {
+    display: -webkit-flex;
+    display: flex;
+    width: 300px;
+    height: 270px;
+    background-color: grey;
+}
+
+.flex-container3 {
+    display: -webkit-flex;
+    display: flex;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+}
+
+.row            { 
+  -webkit-flex-direction: row; 
+  flex-direction: row;
+}
+
+.column { 
+  -webkit-flex-direction: column; 
+  flex-direction: column; 
+  float: left;
+}
+
+.flex-item {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-flex-flow: column wrap;
+   flex-flow: column wrap;
+   -webkit-align-content: center;
+   align-content: center;
+    background-color: cornflowerblue;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+
+.flex-item-order {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-flex-flow: column wrap;
+   flex-flow: column wrap;
+   -webkit-align-content: center;
+   align-content: center;
+    background-color: blue;
+    list-style-type: none;
+    width: 250px;
+    height: 200px;
+    margin: 10x;
+    padding: 5px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+}
+}
+
+</style>
+	
+</head>
+
+<body>
+
+<h1><center>PIZZA!</center></h1>
+
+<div class="flex-containermaster row">
+
+<div class="flex-container1">
+
+<div class="flex-item">
+<ul class="radio">
+<form action="" id="sizeSelect">
+<fieldset>
+<legend>Select size</legend>
+<li><input type="radio" name="size[]" value="szpersonal" checked><label for="szpersonal">Personal</label></li>
+<li><input type="radio" name="size[]" value="szmedium"><label for="szmedium">Medium</label></li>
+<li><input type="radio" name="size[]" value="szlarge"><label for="szlarge">Large</label></li>
+<li><input type="radio" name="size[]" value="szxtralarge"><label for="szxtralarge">Extra Large</label></li>
+</fieldset>
+</form>
+</ul>
+</div>
+
+</div>
+
+<div class="flex-container2">
+
+<div class="flex-item">
+<ul class="radio">
+<form action="" id="meatsSelect">
+<fieldset>
+<legend>Select meat</legend>
+<label><input type="checkbox" name="meats[]" value="meatpp"><label for="meatpp">Pepperoni</label><br>
+<label><input type="checkbox" name="meats[]" value="meatsaus"><label for="meatsaus">Sausage</label><br>
+<label><input type="checkbox" name="meats[]" value="meatcbac"><label for="meatcbac">Canadian Bacon</label><br>
+<label><input type="checkbox" name="meats[]" value="meatgbeef"><label for="meatgbeef">Ground Beef</label><br>
+<label><input type="checkbox" name="meats[]" value="meatanchov"><label for="meatanchov">Anchovy</label><br>
+<label><input type="checkbox" name="meats[]" value="meatchix"><label for="meatchix">Chicken</label><br>
+</fieldset>
+</form>
+</ul>
+</div>
+
+</div>
+
+<div class="flex-container3">
+
+<div class="flex-item">
+<ul class="radio">
+<form action="" id="veggiesSelect">
+<fieldset>
+<legend>Select veggies</legend>
+<form action="/action_page.php">
+<label><input type="checkbox" name="veggies[]" value="vegtomto"><label for="vegtomto">Tomatoes</label><br>
+<label><input type="checkbox" name="veggies[]" value="vegonion"><label for="vegonion">Onions</label><br>
+<label><input type="checkbox" name="veggies[]" value="vegolive"><label for="vegolive">Olives</label><br>
+<label><input type="checkbox" name="veggies[]" value="veggrnpep"><label for="veggrnpep">Green Peppers</label><br>
+<label><input type="checkbox" name="veggies[]" value="vegmush"><label for="vegmush">Mushrooms</label><br>
+<label><input type="checkbox" name="veggies[]" value="vegpine"><label for="vegpine">Pineapple</label><br>
+<label><input type="checkbox" name="veggies[]" value="vegspnch"><label for="vegspnch">Spinach</label><br>
+<label><input type="checkbox" name="veggies[]" value="vegjalap"><label for="vegjalap">Jalapeno</label><br><br>
+</fieldset>
+</form>
+</ul>
+</div>
+
+</div>
+
+
+<div class="flex-item">
+    <div class="flex-containermaster row">
+        <div class="flex-item-order">
+            <input type="button" name="Order" onclick="getTotal()" value="Place order">
+            <input type="button" name="cancel" onclick="cancel()" value="Reload page">
+        </div>
+        
+	<div id="getCart">
+		<h3>Items ordered</h3>
+			<div id="showOrder"></div>
+			<div id="showTotal"></div>
+	</div>
+	</div>
+</div>
+
+</div>
+
+<script>
+
+/* getTotal includes:
+			SELECTIONS - Size, Crust, Sauce, Cheese, Meats, Veggies
+			
+			SUBTOTAL (itemized list of costs)				
+				Modifers
+				Additional Meat items (first one is complementary):
+					+$1.00 each additional meat items beyond the first complementary meat item
+				Additional Veggie items (first one is complementary):
+					+$1.00 each additional veggie items beyond the first complementary veggie item
+				Extra Cheese:
+					+$3.00 for any size pizza
+				Crust:
+					+$3.00 for Cheese Stuffed Crust. All other crusts are complementary.
+
+			CALCULATED TOTAL
+
+
+			<li id=sizePrice></li>
+*/
+
+function getTotal() {
+	var itemsOrdered ="<h3>Items ordered</h3>";
+	var pizzaTotal = 0;
+	var subTotal = 0;
+	var sizeSelectionArray = document.getElementById("sizeSelect");
+	}
+	for (var i = 0; i < sizeSelectionArray.length; i++) {
+		if (sizeSelectionArray[i].checked) {
+			var selectedSize = sizeSelectionArray[i].value;
+			itemsOrdered = itemsOrdered+selectedSize+"<br>";
+		}
+	}
+	if (selectedSize === "szpersonal") {
+		subTotal = 6;
+	} else if (selectedSize === "szmedium") {
+		subTotal = 10;
+	} else if (selectedSize === "szlarge") {
+		subTotal = 14;
+	} else if (selectedSize === "szxtralarge") {
+		subTotal = 16;
+	}
+	pizzaTotal = subTotal;
+	console.log(selectedSize+" = $"+subTotal+".00");
+	console.log("size itemsOrdered: "+itemsOrdered);
+	console.log("subtotal: $"+pizzaTotal+".00");
+	getMeat(pizzaTotal,itemsOrdered); // All three of these variables will be passed on to each function
+};
+
+
+function getMeat (pizzaTotal,itemsOrdered) {
+	var meatTotal = 0;
+	var selectedMeat = [];
+	var meatsSelectionArray = document.getElementById("meatsSelect");
+	for (var j = 0; j < meatSelectionArray.length; j++) {	
+		if (meatArray[j].checked) {
+			selectedMeat.push(meatSelectionArray[j].value);
+			console.log("selected meat item: ("+meatSelectionArray[j].value+")");
+			itemsOrdered = itemsOrdered+meatArray[j].value+"<br>";
+		}
+	var meatCount = selectedMeat.length;
+	if (meatCount > 1) {
+		meatTotal = (meatCount - 1);
+	} else {
+		meatTotal = 0;
+	}
+	pizzaTotal = (pizzaTotal + meatTotal);
+	console.log("total selected meat items: "+meatCount);
+	console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
+	console.log("meat itemsOrdered: "+itemsOrdered);
+	console.log("Purchase Total: "+"$"+pizzaTotal+".00");
+	document.getElementById("showOrder").innerHTML=itemsOrdered;
+	document.getElementById("showTotal").innerHTML = "</h3>Total: <strong>$"+pizzaTotal+".00"+"</strong></h3>";
+}
+
+
+function cancel() {
+    location.reload();
+}
+</script>
+
+<!--
+function getSize() {
+ var size = document.querySelector('input[name="size[]"]:checked').id;
+document.getElementById("sizeSelect").innerHTML = size;
+}
+
+function getMeats() {
+ var meats = document.querySelector('input[name="meats[]"]:checked').id;
+document.getElementById("meatsSelect").innerHTML = meats;
+}
+
+function geVeggies() {
+ var veggies = document.querySelector('input[name="veggies[]"]:checked').id;
+document.getElementById("veggiesSelect").innerHTML = veggies;
+}
+
+ //Set up an associative array
+ //The keys represent the size of the cake
+ //The values represent the cost of the pizza based on size i.e A "szpersonal"(personal) = pizza $35
+var sizeprice= new Array();
+size_price["szpersonal"]=6;
+size_price["szmediumsize"]=10;
+size_price["szlarge"]=14;
+size_price["szxtralarge"]=16;
+
+form action="" id="total"
+!-->
+
+</body>
+</html>

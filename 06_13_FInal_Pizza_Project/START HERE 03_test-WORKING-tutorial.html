@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<form action="" id="sizeSelect">
+<fieldset>
+<legend>Select size</legend>
+<li><input type="radio" name="size[]" id="szpersonal" value="Personal" checked><label for="szpersonal">Personal</label></li>
+<li><input type="radio" name="size[]" id="szmedium" value="Medium"><label for="szmedium">Medium</label></li>
+<li><input type="radio" name="size[]" id="szlarge" value="Large"><label for="szlarge">Large</label></li>
+<li><input type="radio" name="size[]" id="xtralarge" value="Extra Large"><label for="xtralarge">Extra Large</label></li>
+</fieldset>
+</form>
+
+<form action="" id="crustSelect">
+<fieldset>
+<legend>Select crust</legend>
+<li><input type="radio" name="crust[]" id="crustpln" value="Plain Crust" checked><label for="crustpln">Plain Crust</label></li>
+<li><input type="radio" name="crust[]" id="crustgrlc" value="Garlic Butter Crust"><label for="crustgrlc">Garlic Butter Crust</label></li>
+<li><input type="radio" name="crust[]" id="crustchz" value="Cheese Stuffed Crust"><label for="crustchz">Cheese Stuffed Crust</label></li>
+<li><input type="radio" name="crust[]" id="crustsp" value="Spicy Crust"><label for="crustsp">Spicy Crust</label></li>
+<li><input type="radio" name="crust[]" id="crustHS" value="House Special Crust"><label for="crustHS">House Special Crust</label></li>
+</fieldset>
+</form>
+
+<form action="" id="sauceSelect">
+<fieldset>
+<legend>Select sauce</legend>
+<li><input type="radio" name="sauce[]" id="saucemar" value="Marinara Sauce" checked><label for="saucemar">Marinara Sauce</label></li>
+<li><input type="radio" name="sauce[]" id="saucewhit" value="White Sauce"><label for="saucewhit">White Sauce</label></li>
+<li><input type="radio" name="sauce[]" id="saucebbq" value="BBQ Sauce"><label for="saucebbq">BBQ Sauce</label></li>
+<li><input type="radio" name="sauce[]" id="saucenone" value="No Sauce"><label for="saucenone">No Sauce</label></li>
+</fieldset>
+</form>
+
+<form action="" id="meatSelect">
+<fieldset>
+<legend>Select meats</legend>
+<li><input type="checkbox" name="meats[]" id="meatpp" value="Pepperoni"><label for="meatpp">Pepperoni</label></li>
+<li><input type="checkbox" name="meats[]" id="meatsaus" value="Sausage"><label for="meatsaus">Sausage</label></li>
+<li><input type="checkbox" name="meats[]" id="meatcbac" value="Canadian Bacon"><label for="meatcbac">Canadian Bacon</label></li>
+<li><input type="checkbox" name="meats[]" id="meatgbeef" value="Ground Beef"><label for="meatgbeef">Ground Beef</label></li>
+<li><input type="checkbox" name="meats[]" id="meatanchov" value="Anchovy"><label for="meatanchov">Anchovy</label></li>
+<li><input type="checkbox" name="meats[]" id="meatchix" value="Chicken"><label for="meatchix">Chicken</label></li>
+</fieldset>
+</form>
+
+    <div class="flex-containermaster row">
+        <div class="flex-item-order">
+            <input type="button" id="btnOrder" name="Order" value="Place order" onclick="getTotal()"; "getSauce"; getCrust"; "getMeat()";>
+            <input type="button" name="cancel" onclick="cancel()" value="Reload page">
+        </div>
+    </div>
+    
+	<div id="getCart">
+			<div id="itemsOrder"></div>
+			<div id="showTotal"></div>
+	</div>
+
+<script>
+function getTotal() {
+	var itemsOrdered ="<h3>Items Ordered:</h3>";
+    var pizzaTotal = 0;
+	var sizeTotal = 0;
+	var sizeSelectionArray = document.getElementById("sizeSelect");
+    for (var i = 0; i < sizeSelectionArray.length; i++) {
+		if (sizeSelectionArray[i].checked) {
+			var selectedSize = sizeSelectionArray[i].value;
+			itemsOrdered = itemsOrdered+selectedSize+"<br>";
+            }
+	} 
+    if (selectedSize === "Personal") {
+		sizeTotal = 6;
+	} else if (selectedSize === "Medium") {
+		sizeTotal = 10;
+	} else if (selectedSize === "Large") {
+		sizeTotal = 14;
+	} else if (selectedSize === "Extra Large") {
+		sizeTotal = 16;
+	}
+	pizzaTotal = sizeTotal;
+	console.log(selectedSize+" = $"+pizzaTotal+".00");
+	console.log("sizeTotal: $"+pizzaTotal+".00");    
+    // document.getElementById("showTotal").innerHTML = selectedSize; SHOW output of variables at this point
+    
+	getCrust(pizzaTotal,itemsOrdered); // ALL three of these variables will be passed on to each function
+
+};
+
+function getCrust(pizzaTotal,itemsOrdered) {
+	var crustTotal = 0;
+	var crustSelectionArray = document.getElementById("crustSelect");
+    for (var j = 0; j < crustSelectionArray.length; j++) {
+		if (crustSelectionArray[j].checked) {
+			var selectedCrust = crustSelectionArray[j].value;
+			itemsOrdered = itemsOrdered+selectedCrust+"<br>";
+        }
+	}
+	if (selectedCrust === "Cheese Stuffed Crust") {
+		crustTotal = 3;
+	}
+	pizzaTotal = (pizzaTotal + crustTotal);
+	console.log("selected crust:("+crustSelectionArray[j].value+")");
+	console.log("crustSelect itemsOrdered: "+itemsOrdered);
+	console.log("crustTotal: $"+pizzaTotal+".00");    
+    // document.getElementById("showTotal").innerHTML = selectedSize; SHOW output of variables at this point
+    
+	getSauce(pizzaTotal,itemsOrdered); // ALL three of these variables will be passed on to each function
+
+};
+
+function getSauce(pizzaTotal,itemsOrdered) {
+	var sauceTotal = 0;
+	var sauceSelectionArray = document.getElementById("sauceSelect");
+    for (var k = 0; k < sauceSelectionArray.length; k++) {
+		if (sauceSelectionArray[k].checked) {
+			var selectedSauce = sauceSelectionArray[k].value;
+			itemsOrdered = itemsOrdered+selectedSauce+"<br>";
+    	}
+	}
+	if (selectedSauce === "No Sauce") {
+		sauceTotal = 3;
+	}
+	pizzaTotal = (pizzaTotal + sauceTotal);
+	console.log("selected sauce:("+sauceSelectionArray[k].value+")");
+	console.log("sauceSelect itemsOrdered: "+itemsOrdered);
+	console.log("sauceTotal: $"+pizzaTotal+".00");    
+    // document.getElementById("showTotal").innerHTML = selectedSize; SHOW output of variables at this point
+    
+	getMeat(pizzaTotal,itemsOrdered); // ALL three of these variables will be passed on to each function
+
+};
+
+
+function getMeat(pizzaTotal,itemsOrdered) {
+	var meatTotal = 0;
+	var selectedMeat = []; //[] is an array, {} is an object. An array is a type of object intended to be only assigned numeric keys.
+	var meatArray = document.getElementById("meatSelect");
+	for (var l = 0; l < meatArray.length; l++) {
+		if (meatArray[l].checked) {
+			selectedMeat.push(meatArray[l].value);
+			console.log("selected meat item: ("+meatArray[l].value+")");
+			itemsOrdered = itemsOrdered+meatArray[l].value+"<br>";
+		}
+	}
+	var meatCount = selectedMeat.length;
+	if (meatCount > 1) {
+		meatTotal = (meatCount - 1);
+	} else {
+		meatTotal = 0;
+	}
+	pizzaTotal = (pizzaTotal + meatTotal);
+	console.log("total selected meat items: "+meatCount);
+	console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
+	console.log("meat itemsOrdered: "+itemsOrdered);
+	console.log("Purchase Total: "+"$"+pizzaTotal+".00");
+	document.getElementById("itemsOrder").innerHTML=itemsOrdered;
+	document.getElementById("showTotal").innerHTML = "<h3>Total: <strong>$"+pizzaTotal+".00"+"</strong></h3>";
+};
+
+/*function myOrder() {
+    getTotal()
+    getCrust
+    getMeat()
+}
+*/
+
+ 
+</script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	body {
+		display: block;
+	}
+
+	div {
+	    width: auto;
+	    border: 5px solid green;
+	    padding: 5px;
+	    margin: 5px;
+	    align-items: center;
+	}
+	.flex-containermaster {
+	    display: flex;
+		background-image: url("http://www.wallpapers-web.com/data/out/93/4561170-grass-wallpapers.jpg");
+	    flex-flow: row wrap;
+	  	justify-content: center;
+	    padding-left: 100px;
+	    padding-right: 100px;
+	    width: auto;
+	    height: auto;
+	    flex-wrap: wrap;
+	    align-items: baseline;
+	    background-color: white;
+	}
+
+	.flex-containermaster-title {
+	    display: flex;
+		background-image: url("https://borderline-lighting.com/wp-content/uploads/2012/08/pizza-2711.gif");
+		background-size: 310px 95px;
+	    flex-flow: row wrap;
+	  	justify-content: center;
+	    width: 300px;
+	    height: auto;
+	    flex-wrap: wrap;
+	    align-items: baseline;
+	    background-color: ;
+	}	
+
+	.flex-containermaster-menu {
+	    display: flex;
+	    background-image: url("https://3.bp.blogspot.com/-rd8OWqlJq5o/UIGM-gcblII/AAAAAAAAAHc/SLMelrNFzlc/s1600/red_checkers_background_3.jpg");
+	    flex-flow: row wrap;
+	  	justify-content: center;
+	    padding: 50px;
+	    margin-top: 5px;
+	    margin-left: 5px
+	    margin-right: 5px;
+	    margin-bottom: 5px;
+	    width: auto;
+	    height: auto;
+	    flex-wrap: wrap;
+	    align-items: baseline;
+	}
+
+	.flex-container1 {
+	    display: flex;
+	    width: auto;
+	    height: auto;
+	    background-color: red;
+	}
+
+	.flex-container2 {
+	    display: flex;
+	    width: auto;
+	    height: auto;
+	    background-color: white;
+	}
+
+	.flex-container3 {
+	    display: flex;
+	    width: auto;
+	    height: auto;
+	    background-color: blue;
+	}
+
+	.column { 
+	  flex-direction: column; 
+	  float: left;
+	}
+
+	.flex-item {
+	   display: flex;
+	   align-items: baseline;
+	   align-self: flex-start;
+	   justify-content: top;
+	   flex-flow: column wrap;
+	   align-content: baseline;
+	    background-color: cornflowerblue;
+	    padding: 5px;
+	    margin-top: 5px;
+	    margin-left: 5px
+	    margin-right: 5px;
+	    margin-bottom: 5px;
+	    border: solid; 
+	    width: auto;
+	    height: 180px;
+	    border: 5px solid green;
+	}
+
+	.flex-containermaster-order {
+	    display: flex;
+	    flex-flow: row wrap;
+	  	justify-content: center;
+	    width: auto;
+	    height: auto;
+	    flex-wrap: wrap;
+	    align-items: baseline;
+	    background-color: blue;
+	}
+
+	.flex-item-order {
+	   display: flex;
+	   align-items: center;
+	   justify-content: center;
+	   flex-flow: column wrap;
+	   align-content: center;
+	    background-color: green;
+	    list-style-type: none;
+	    padding: 5px;
+	    margin-top: 5px;
+	    margin-left: 5px
+	    margin-right: 5px;
+	    margin-bottom: 5px;
+	    width: auto;
+	    height: auto;
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+	    padding: 0;
+	}
+
+	fieldset {
+    border: 1px solid #ddd;
+    padding: 0 .4em .4em .4em;
+    margin: 0 0 1.5em 0;
+    border-radius: 8px;
+    margin: 0 5px;
+    height: auto;
+	}
+
+</style>
+</head>
+
+<body>
+<div class="flex-containermaster">
+
+<p>
+<center><div class="flex-containermaster-title">
+<h1><center><br></center></h1>
+</div></center>
+</p>
+
+<p>
+<div class="flex-containermaster-menu">
+
+<div class="flex-container1">
+
+<ul class="flex-item">
+<form action="" id="sizeSelect">
+<fieldset>
+<legend>Select size</legend>
+<li><input type="radio" name="size[]" id="szpersonal" value="Personal" checked><label for="szpersonal">Personal</label></li>
+<li><input type="radio" name="size[]" id="szmedium" value="Medium"><label for="szmedium">Medium</label></li>
+<li><input type="radio" name="size[]" id="szlarge" value="Large"><label for="szlarge">Large</label></li>
+<li><input type="radio" name="size[]" id="xtralarge" value="Extra Large"><label for="xtralarge">Extra Large</label></li>
+<br><br><br><br>
+</fieldset>
+</form>
+</ul>
+
+<ul class="flex-item">
+<form action="" id="crustSelect">
+<fieldset>
+<legend>Select crust</legend>
+<li><input type="radio" name="crust[]" id="crustpln" value="Plain Crust" checked><label for="crustpln">Plain Crust</label></li>
+<li><input type="radio" name="crust[]" id="crustgrlc" value="Garlic Butter Crust"><label for="crustgrlc">Garlic Butter Crust</label></li>
+<li><input type="radio" name="crust[]" id="crustchz" value="Cheese Stuffed Crust"><label for="crustchz">Cheese Stuffed Crust</label></li>
+<li><input type="radio" name="crust[]" id="crustsp" value="Spicy Crust"><label for="crustsp">Spicy Crust</label></li>
+<li><input type="radio" name="crust[]" id="crustHS" value="House Special Crust"><label for="crustHS">House Special Crust</label></li>
+<br><br><br>
+</fieldset>
+</form>
+</ul>
+
+</div>
+
+
+<div class="flex-container2">
+
+<ul class="flex-item">
+<form action="" id="sauceSelect">
+<fieldset>
+<legend>Select sauce</legend>
+<li><input type="radio" name="sauce[]" id="saucepln" value="Marinara Sauce" checked><label for="saucepln">Marinara Sauce</label></li>
+<li><input type="radio" name="sauce[]" id="saucegrlc" value="White Sauce"><label for="saucegrlc">White Sauce</label></li>
+<li><input type="radio" name="sauce[]" id="saucechz" value="Barbeque Sauce"><label for="saucechz">Barbeque Sauce</label></li>
+<li><input type="radio" name="sauce[]" id="saucenone" value="No Sauce"><label for="saucenone">No Sauce</label></li>
+<br><br><br><br>
+</fieldset>
+</form>
+</ul>
+
+<ul class="flex-item">
+<form action="" id="cheeseSelect">
+<fieldset>
+<legend>Select cheese</legend>
+<li><input type="radio" name="cheese[]" id="cheesereg" value="Regular Cheese" checked><label for="cheesereg">Regular Cheese</label></li>
+<li><input type="radio" name="cheese[]" id="chessenone" value="No Cheese"><label for="chessenone">No Cheese</label></li>
+<li><input type="radio" name="cheese[]" id="cheeseextra" value="Extra Cheese"><label for="cheeseextra">Extra Cheese</label></li>
+<br><br><br><br><br>
+</fieldset>
+</form>
+</ul>
+
+</div>
+
+
+<div class="flex-container3">
+
+<ul class="flex-item">
+<form action="" id="meatSelect">
+<fieldset>
+<legend>Select Meats</legend>
+<li><input type="checkbox" name="meats[]" id="meatpp" value="Pepperoni"><label for="meatpp">Pepperoni</label></li>
+<li><input type="checkbox" name="meats[]" id="meatsaus" value="Sausage"><label for="meatsaus">Sausage</label></li>
+<li><input type="checkbox" name="meats[]" id="meatcbac" value="Canadian Bacon"><label for="meatcbac">Canadian Bacon</label></li>
+<li><input type="checkbox" name="meats[]" id="meatgbeef" value="Ground Beef"><label for="meatgbeef">Ground Beef</label></li>
+<li><input type="checkbox" name="meats[]" id="meatanchov" value="Anchovy"><label for="meatanchov">Anchovy</label></li>
+<li><input type="checkbox" name="meats[]" id="meatchix" value="Chicken"><label for="meatchix">Chicken</label></li>
+<br><br>
+</fieldset>
+</form>
+</ul>
+
+<ul class="flex-item">
+<form action="" id="veggieSelect">
+<fieldset>
+<legend>Select Veggies</legend>
+<li><input type="checkbox" name="veggies[]" id="vegtomto" value="Tomatoes"><label for="vegtomto">Tomatoes</label></li>
+<li><input type="checkbox" name="veggies[]" id="vegonion" value="Onions"><label for="vegonion">Onions</label></li>
+<li><input type="checkbox" name="veggies[]" id="vegolive" value="Olives"><label for="vegolive">Olives</label></li>
+<li><input type="checkbox" name="veggies]" id="veggrnpep" value="Green Peppers"><label for="veggrnpep">Green Peppers</label></li>
+<li><input type="checkbox" name="veggies[]" id="vegmush" value="Mushrooms"><label for="vegmush">Mushrooms</label></li>
+<li><input type="checkbox" name="veggies[]" id="vegpine" value="Pineapple"><label for="vegpine">Pineapple</label></li>
+<li><input type="checkbox" name="veggies[]" id="vegspnch" value="Spinach"><label for="vegspnch">Spinach</label></li>
+<li><input type="checkbox" name="veggies[]" id="vegjalap" value="Jalapeno"><label for="vegjalap">Jalapeno</label></li>
+</fieldset>
+</form>
+</ul>
+
+</div>
+</div>
+</p>
+
+<div class="flex-containermaster-order">
+<p>
+    <div class="flex-item-order">   	
+        <input type="button" id="btnOrder" name="Order" value="Place order" onclick="getTotal()";>
+        <input type="button" name="cancel" onclick="cancel()" value="Cancel order">
+    </div>
+
+    <div class="flex-item-order">
+    	<h3>Items Ordered:</h3>
+		<div id="itemsOrder"></div>
+		<div id="showTotal"></div>
+		
+	</div>
+</p>
+</div>
+</div>
+
+
+<script>
+function getTotal() {
+	var itemsOrdered ="";
+    var pizzaTotal = 0;
+	var sizeTotal = 0;
+	var sizeSelectionArray = document.getElementById("sizeSelect");
+    	for (var i = 0; i < sizeSelectionArray.length; i++) {
+			if (sizeSelectionArray[i].checked) {
+				var selectedSize = sizeSelectionArray[i].value;
+				itemsOrdered = itemsOrdered+selectedSize+"<br>";
+    	        }
+		} 
+    		if (selectedSize === "Personal") {
+				sizeTotal = 6;
+			} else if (selectedSize === "Medium") {
+				sizeTotal = 10;
+			} else if (selectedSize === "Large") {
+				sizeTotal = 14;
+			} else if (selectedSize === "Extra Large") {
+				sizeTotal = 16;
+			}
+	pizzaTotal = sizeTotal;
+	console.log(selectedSize+" = $"+pizzaTotal+".00");
+	console.log("sizeTotal: $"+pizzaTotal+".00");
+    document.getElementById("showTotal").innerHTML = selectedSize; // SHOW output of variables at this point
+    
+	getCrust(pizzaTotal,itemsOrdered); // ALL three of these variables will be passed on to each function
+
+};
+
+function getCrust(pizzaTotal,itemsOrdered) {
+	var crustTotal = 0;
+	
+	var crustSelectionArray = document.getElementById("crustSelect");
+    	for (var j = 0; j < crustSelectionArray.length; j++) {
+			if (crustSelectionArray[j].checked) {
+				var selectedCrust = crustSelectionArray[j].value;
+				itemsOrdered = itemsOrdered+selectedCrust+"<br>";
+    	        }
+
+			if (selectedCrust === "Cheese Stuffed Crust") {
+				crustTotal = 3;
+			}
+		}
+	console.log("selected crust: "+selectedCrust);
+	console.log("crustTotal: $"+crustTotal+".00");
+	console.log("crustSelect itemsOrdered: "+itemsOrdered);
+    // document.getElementById("showTotal").innerHTML = selectedSize; SHOW output of variables at this point
+    pizzaTotal = (pizzaTotal + crustTotal);
+    console.log("pizzaTotal: $"+pizzaTotal+".00");
+	getSauce(pizzaTotal,itemsOrdered); // ALL three of these variables will be passed on to each function
+
+};
+
+function getSauce(pizzaTotal,itemsOrdered) {
+	var sauceSelectionArray = document.getElementById("sauceSelect");
+    	for (var k = 0; k < sauceSelectionArray.length; k++) {
+			if (sauceSelectionArray[k].checked) {
+				var selectedSauce = sauceSelectionArray[k].value;
+				itemsOrdered = itemsOrdered+selectedSauce+"<br>";
+    	        }
+		}
+	console.log("selected sauce: "+selectedSauce);
+	//console.log("sauceTotal: $"+sauceTotal+".00");
+	console.log("sauceSelect itemsOrdered: "+itemsOrdered);
+    // document.getElementById("showTotal").innerHTML = selectedSize; SHOW output of variables at this point
+    // pizzaTotal = (pizzaTotal + sauceTotal);
+    console.log("pizzaTotal: $"+pizzaTotal+".00");
+	getCheese(pizzaTotal,itemsOrdered); // ALL three of these variables will be passed on to each function
+
+};
+
+function getCheese(pizzaTotal,itemsOrdered) {
+	var cheeseTotal = 0;
+	
+	var cheeseSelectionArray = document.getElementById("cheeseSelect");
+    	for (var l = 0; l < cheeseSelectionArray.length; l++) {
+			if (cheeseSelectionArray[l].checked) {
+				var selectedCheese = cheeseSelectionArray[l].value;
+				itemsOrdered = itemsOrdered+selectedCheese+"<br>";
+    	        }
+
+			if (selectedCheese === "Extra Cheese") {
+				cheeseTotal = 3;
+			}
+		}
+	console.log("selected cheese: "+selectedCheese);
+	console.log("cheeseTotal: $"+cheeseTotal+".00");
+	console.log("cheeseSelect itemsOrdered: "+itemsOrdered);
+    // document.getElementById("showTotal").innerHTML = selectedSize; SHOW output of variables at this point
+    pizzaTotal = (pizzaTotal + cheeseTotal);
+    console.log("pizzaTotal: $"+pizzaTotal+".00");
+	getMeat(pizzaTotal,itemsOrdered); // ALL three of these variables will be passed on to each function
+
+};
+
+function getMeat(pizzaTotal,itemsOrdered) {
+	var meatTotal = 0;
+	var selectedMeat = []; //[] is an array, {} is an object. An array is a type of object intended to be only assigned numeric keys.
+	var meatArray = document.getElementById("meatSelect");
+		for (var m = 0; m < meatArray.length; m++) {
+			if (meatArray[m].checked) {
+				selectedMeat.push(meatArray[m].value);
+				console.log("selected meat item: ("+meatArray[m].value+")");
+				itemsOrdered = itemsOrdered+meatArray[m].value+"<br>";
+			}
+		}
+	var meatCount = selectedMeat.length;
+		if (meatCount > 1) {
+			meatTotal = (meatCount - 1);
+		} else {
+			meatTotal = 0;
+			}
+	pizzaTotal = (pizzaTotal + meatTotal);
+	console.log("total selected meat items: "+meatCount);
+	console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
+	console.log("meat itemsOrdered: "+itemsOrdered);
+	console.log("Purchase Total: "+"$"+pizzaTotal+".00");
+	document.getElementById("itemsOrder").innerHTML=itemsOrdered;
+	document.getElementById("showTotal").innerHTML =pizzaTotal+".00"+"</strong></h3>";
+	getVeggie(pizzaTotal,itemsOrdered); // ALL three of these variables will be passed on to each function
+};
+
+function getVeggie(pizzaTotal,itemsOrdered) {
+	var veggieTotal = 0;
+	var selectedVeggie = []; //[] is an array, {} is an object. An array is a type of object intended to be only assigned numeric keys.
+	var veggieArray = document.getElementById("veggieSelect");
+		for (var n = 0; n < veggieArray.length; n++) {
+			if (veggieArray[n].checked) {
+				selectedVeggie.push(veggieArray[n].value);
+				console.log("selected veggie item: ("+veggieArray[n].value+")");
+				itemsOrdered = itemsOrdered+veggieArray[n].value+"<br>";
+			}
+		}
+	var veggieCount = selectedVeggie.length;
+		if (veggieCount > 1) {
+			veggieTotal = (veggieCount - 1);
+		} else {
+			veggieTotal = 0;
+			}
+	pizzaTotal = (pizzaTotal + veggieTotal);
+	console.log("total selected veggie items: "+veggieCount);
+	console.log(veggieCount+" veggie - 1 free veggie = "+"$"+veggieTotal+".00");
+	console.log("veggie itemsOrdered: "+itemsOrdered);
+	console.log("Purchase Total: "+"$"+pizzaTotal+".00");
+	document.getElementById("itemsOrder").innerHTML=itemsOrdered;
+	document.getElementById("showTotal").innerHTML = "<h3>Total: <strong>$"+pizzaTotal+".00"+"</strong></h3>";
+};
+
+function cancel() {
+    location.reload();
+};
+
+/*
+	function myOrder(pizzaTotal) {
+    sizeTotal();
+    getCrust();
+    getMeat();
+}
+*/
+
+ 
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<form action="" id="sizeSelect">
+<fieldset>
+<legend>Select size</legend>
+<li><input type="radio" name="size[]" value="szpersonal" checked><label for="szpersonal">Personal</label></li>
+<li><input type="radio" name="size[]" value="szmedium"><label for="szmedium">Medium</label></li>
+<li><input type="radio" name="size[]" value="szlarge"><label for="szlarge">Large</label></li>
+<li><input type="radio" name="size[]" value="szxtralarge"><label for="szxtralarge">Extra Large</label></li>
+</fieldset>
+</form>
+
+    <div class="flex-containermaster row">
+        <div class="flex-item-order">
+            <input type="button" id="btnOrder" name="Order" onclick="getTotal()" value="Place order">
+            <input type="button" name="cancel" onclick="cancel()" value="Reload page">
+        </div>
+    </div>
+    
+	<div id="getCart">
+		<h3>Items ordered</h3>
+			<div id="itemsOrdered"></div>
+			<div id="showTotal"></div>
+	</div>
+
+<script>
+function getTotal() {<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<form action="" id="sizeSelect">
+<fieldset>
+<legend>Select size</legend>
+<li><input type="radio" name="size[]" id="szpersonal" value="Personal" checked><label for="szpersonal">Personal</label></li>
+<li><input type="radio" name="size[]" id="szmedium" value="Medium"><label for="szmedium">Medium</label></li>
+<li><input type="radio" name="size[]" id="szlarge" value="Large"><label for="szlarge">Large</label></li>
+<li><input type="radio" name="size[]" id="xtralarge" value="Extra Large"><label for="xtralarge">Extra Large</label></li>
+</fieldset>
+</form>
+
+<form action="" id="meatSelect">
+<fieldset>
+<legend>Select meats</legend>
+
+<li><input type="checkbox" name="meats[]" id="meatpp" value="Pepperoni"><label for="meatpp">Pepperoni</label></li>
+<li><input type="checkbox" name="meats[]" id="meatsaus" value="Sausage"><label for="meatsaus">Sausage</label></li>
+<li><input type="checkbox" name="meats[]" id="meatcbac" value="Canadian Bacon"><label for="meatcbac">Canadian Bacon</label></li>
+<li><input type="checkbox" name="meats[]" id="meatgbeef" value="Ground Beef"><label for="meatgbeef">Ground Beef</label></li>
+<li><input type="checkbox" name="meats[]" id="meatanchov" value="Anchovy"><label for="meatanchov">Anchovy</label></li>
+<li><input type="checkbox" name="meats[]" id="meatchix" value="Chicken"><label for="meatchix">Chicken</label></li>
+</fieldset>
+</form>
+
+    <div class="flex-containermaster row">
+        <div class="flex-item-order">
+            <input type="button" id="btnOrder" name="Order" onclick="getTotal()" value="Place order">
+            <input type="button" name="cancel" onclick="cancel()" value="Reload page">
+        </div>
+    </div>
+    
+	<div id="getCart">
+		<h3>Items ordered</h3>
+			<div id="itemsOrdered"></div>
+			<div id="showTotal"></div>
+	</div>
+
+<script>
+function getTotal() {
+	var itemsOrdered ="<h3>items ordered</h3>";
+	    var pizzaTotal = 0;
+	var subTotal = 0;
+	var sizeSelectionArray = document.getElementById("sizeSelect");
+    for (var i = 0; i < sizeSelectionArray.length; i++) {
+		if (sizeSelectionArray[i].checked) {
+			var selectedSize = sizeSelectionArray[i].value;
+			itemsOrdered = itemsOrdered+selectedSize+"<br>";
+            }
+	} 
+    if (selectedSize === "Personal") {
+		subTotal = 6;
+	} else if (selectedSize === "Medium") {
+		subTotal = 10;
+	} else if (selectedSize === "Large") {
+		subTotal = 14;
+	} else if (selectedSize === "Extra Large") {
+		subTotal = 16;
+	}
+	pizzaTotal = subTotal;
+	console.log(selectedSize+" = $"+pizzaTotal+".00");
+	console.log("sizeSelect itemsOrdered: "+itemsOrdered);
+	console.log("subtotal: $"+pizzaTotal+".00");    
+    // document.getElementById("showTotal").innerHTML = selectedSize; SHOW output of variables at this point
+    
+	getMeat(pizzaTotal,subTotal); // ALL three of these variables will be passed on to each function
+
+function getMeat(pizzaTotal,subTotal) {
+	var meatItems = 0
+    var selectedMeat=[];
+    var meatSelectionArray = 
+    //[] is an array, {} is an object. An array is a type of object intended to be only assigned numeric keys.
+	var meatSelectionArray = document.getElementsByClassId("meatSelect");
+	for (var j = 0; j < meatSelectionArray.length; j++) {
+		if (meatSelectionArray[j].checked) {
+			selectedMeat.push(meatSelectionArray[j].value);
+			console.log("selected meat item: ("+meatSelectionArray[j].value+")");
+			itemsOrdered = itemsOrderexd+meatSelectionArray[j].value+"<br>";
+		}
+	}
+   	var meatCount = selectedMeat.length;
+	if (meatCount > 1) {
+		meatTotal = (meatCount - 1);
+	} else {
+		meatTotal = 0;
+	}
+	subTotal = (subTotal + meatTotal);
+	console.log("total selected meat items: "+meatCount);
+	console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
+	console.log("meat pizzaTotal: "+pizzaTotal);
+	console.log("Purchase Total: "+"$"+subTotal+".00");
+	document.getElementById("itemsOrdered").innerHTML=pizzaTotal;
+	document.getElementById("showTotal").innerHTML = "<h3>Total: <strong>$"+subTotal+".00"+"</strong></h3>";
+
+};
+
+</script>
+</body>
+</html>
+	var itemsOrdered ="<h3>Items ordered</h3>";
+	var pizzaTotal = document.forms["total"];
+	var subTotal = document.forms["sizetotal"]
+	var sizeSelectionArray = document.getElementById("sizeSelect");
+    document.getElementById('sizeSelect').innerHTML = sizeSelect;
+    }
+	for (var i = 0; i < sizeSelectionArray.length; i++) {
+		if (sizeSelectionArray[i].checked) {
+			var selectedSize = sizeSelectionArray[i].value;
+			itemsOrdered = itemsOrdered+selectedSize+"<br>";
+		}
+	}
+	if (selectedSize === "szpersonal") {
+		sizeTotal = 6;
+	} else if (selectedSize === "szmediumsize") {
+		sizeTotal = 10;
+	} else if (selectedSize === "szlarge") {
+		sizeTotal = 14;
+	} else if (selectedSize === "szxtralarge") {
+		sizeTotal = 16;
+	}
+	pizzaTotal = subTotal;
+	console.log(selectedSize+" = $"+subTotal+".00");
+	console.log("size itemsOrdered: "+itemsOrdered);
+	console.log("subtotal: $"+pizzaTotal+".00");
+	getMeat(pizzaTotal,itemsOrdered); // All three of these variables will be passed on to each function
+}
+};
+
+</script>
+</body>
+</html>

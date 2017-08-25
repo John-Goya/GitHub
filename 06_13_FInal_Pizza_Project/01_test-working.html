@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 10px;
+		background-image: url("https://3.bp.blogspot.com/-rd8OWqlJq5o/UIGM-gcblII/AAAAAAAAAHc/SLMelrNFzlc/s1600/red_checkers_background_3.jpg");
+	}
+
+.flex-containermaster {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+  	justify-content: space-around;
+    width: 900px;
+    height: 400px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: grey;
+}
+
+.flex-container1 {
+    display: -webkit-flex;
+    display: flex;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+}
+
+.flex-container2 {
+    display: -webkit-flex;
+    display: flex;
+    width: 300px;
+    height: 270px;
+    background-color: grey;
+}
+
+.flex-container3 {
+    display: -webkit-flex;
+    display: flex;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+}
+
+.row            { 
+  -webkit-flex-direction: row; 
+  flex-direction: row;
+}
+
+.column { 
+  -webkit-flex-direction: column; 
+  flex-direction: column; 
+  float: left;
+}
+
+.flex-item {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-flex-flow: column wrap;
+   flex-flow: column wrap;
+   -webkit-align-content: center;
+   align-content: center;
+    background-color: cornflowerblue;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+
+.flex-item-order {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-flex-flow: column wrap;
+   flex-flow: column wrap;
+   -webkit-align-content: center;
+   align-content: center;
+    background-color: blue;
+    list-style-type: none;
+    width: 250px;
+    height: 250px;
+    margin: 10x;
+    padding: 5px;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+}
+
+</style>
+	
+</head>
+
+<body>
+<p>Pizza Size</p>
+<label><input type="radio" id="personal" name="size" value=6 checked>Personal</label><br>
+<label><input type="radio" id="medium" name="size" value=10>Medium</label><br>
+<label><input type="radio" id="large" name="size" value=14>Large</label><br>
+<label><input type="radio" id="xLarge" name="size" value=16>Extra Large</label><br><br>
+ 
+<p>Click the "Try it" button to display the value of the value attribute of the radio button.</p>
+ 
+<button onclick="return getTotal()">Try it</button>
+ 
+<p id=price></p>
+<p id=size></p>
+ 
+<script>
+
+/* getTotal includes:
+			SELECTIONS - Size, Crust, Sauce, Cheese, Meats, Veggies
+			
+			SUBTOTAL (itemized list of costs)				
+				Modifers
+				Additional Meat items (first one is complementary):
+					+$1.00 each additional meat items beyond the first complementary meat item
+				Additional Veggie items (first one is complementary):
+					+$1.00 each additional veggie items beyond the first complementary veggie item
+				Extra Cheese:
+					+$3.00 for any size pizza
+				Crust:
+					+$3.00 for Cheese Stuffed Crust. All other crusts are complementary.
+
+			CALCULATED TOTAL
+*/
+
+function getTotal() {
+	getPrice();
+	getSize();
+}
+
+function getPrice() {
+ var size = document.querySelector('input[name="size"]:checked').value;
+document.getElementById("price").innerHTML = size;
+}
+
+function getSize() {
+ var size = document.querySelector('input[name="size"]:checked').id;
+document.getElementById("size").innerHTML = size;
+}
+
+</script>
+ 
+</body>
+</html>

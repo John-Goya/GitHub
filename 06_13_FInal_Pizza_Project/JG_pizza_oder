@@ -1,0 +1,126 @@
+<!DOCTYPE.html>
+<html lang="en">
+<head>
+
+	<link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <fieldset class="form-group" Id="">
+    <legend>Radio buttons</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Option one is this and that&mdash;be sure to include why it's great
+      </label>
+    </div>
+  </fieldset>
+
+
+<--JavaScript, jQuery, and Tether>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<script>
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form>
+<!--size selection radio
+Personal, Medium, Large, and Extra Large
+-->
+
+<form action="/completed_order.js" method="post">
+<input type="radio" name="size" value="personal" checked> Personal<br>
+<input type="radio" name="size" value="medium" checked> Medium<br>
+<input type="radio" name="size" value="large" checked> Large<br>
+<input type="radio" name="size" value="extralarge" checked> Extra Large<br>
+</form>
+
+<!--meat selection checkboxes
+Pepperoni, Sausage, Canadian Bacon, Ground Beef, Anchovy, and Chicken
+-->
+
+<form>
+<form action="/completed_order.js" method="post">
+<input type="checkbox" name="meats" value="male" checked> Male<br>
+</form>
+
+<!--cheese selection radio
+Regular, No cheese, Extra Cheese
+-->
+
+<form>
+<form action="/completed_order.js" method="post">
+<input type="radio" name="cheese" value="male" checked> Male<br>
+</form>
+
+<!--crust size selection radio
+Plain Crust, Garlic Butter Crust, Cheese Stuffed Crust, Spicy Crust, and House Special Crust
+-->
+
+<form>
+<form action="/completed_order.js" method="post">
+<input type="radio" name="crust" value="male" checked> Male<br>
+</form>
+
+<!--sauce selection radio
+Marinara sauce, White sauce, Barbeque sauce, and No Sauce
+-->
+
+<form>
+<form action="/completed_order.js" method="post">
+<input type="radio" name="sauce" value="male" checked> Male<br>
+</form>
+
+<!--veggies selection checkboxes
+Tomatoes, Onions, Olives, Green Peppers, Mushrooms, Pineapple, Spinach, and Jalapeno
+-->
+<form>
+<form action="/completed_order.js" method="post">
+<input type="checkbox" name="veggies" value="male" checked> Male<br>
+</form>
+
